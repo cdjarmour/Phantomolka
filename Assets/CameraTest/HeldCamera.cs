@@ -29,25 +29,9 @@ public class HeldCamera : MonoBehaviour
 
         foreach (CameraSubject subject in CameraSubject.All)
         {
-            // Stores the bounds of the subject
-            Bounds bounds = subject.Bounds;
-
-            // Continue if the bounds are outside the frustum planes
-            if (!GeometryUtility.TestPlanesAABB(planes, bounds))
+            // Skips if the subject is not visible to the player
+            if (!subject.IsVisibleTo(playerCamera, maxDistance))
                 continue;
-            // Continue if the target is too far away from the player
-            Vector3 toTarget = bounds.center - origin;
-            float distance = toTarget.magnitude;
-            if (distance > maxDistance)
-                continue;
-
-            if (Physics.Raycast(origin, toTarget, out RaycastHit hit, distance, ~0, QueryTriggerInteraction.Ignore))
-            {
-                bool hitIsSubject = hit.transform == subject.transform || hit.transform.IsChildOf(subject.transform);
-                if (!hitIsSubject)
-                    continue;
-            }
-
             Debug.Log("Photo taken of: " + subject.SubjectName);
         }
     }
