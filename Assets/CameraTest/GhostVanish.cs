@@ -22,6 +22,7 @@ public class GhostVanish : MonoBehaviour
     {
         hasBeenSeen = false;
         unseenTimer = 0f;
+        transform.parent.gameObject.SetActive(true);
     }
 
     void Update()
@@ -39,8 +40,8 @@ public class GhostVanish : MonoBehaviour
         unseenTimer += Time.deltaTime;
         if (unseenTimer >= vanishDelay)
         {
-            gameObject.SetActive(false);
-            manager.RemoveGhost(this.gameObject);
+            transform.parent.gameObject.SetActive(false);
+            manager.RemoveGhost(this);
         }
     }
 }

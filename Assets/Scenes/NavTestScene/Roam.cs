@@ -39,4 +39,10 @@ public class Roam : MonoBehaviour
         }
         return false;
     }
+
+
+    private void OnDisable() {
+        isRoaming = false;
+    }
+
 }
