@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4012539242670337690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2395468875203866771}
+  - component: {fileID: 6727660455482379333}
+  - component: {fileID: 8090239681556098003}
+  m_Layer: 0
+  m_Name: HeldCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2395468875203866771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012539242670337690}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.64015, y: 0, z: -10.02331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6727660455482379333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012539242670337690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce548f39e819374aa17141a73176237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeldCamera
+  playerCamera: {fileID: 0}
+--- !u!114 &8090239681556098003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012539242670337690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdf189e27a5a144498bb37797d41e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeldCameraInput
+  heldCamera: {fileID: 6727660455482379333}
+  raiseAction: {fileID: 2535010091458937325, guid: 7a5123ac489819245bcd2c11a32c5c5b, type: 3}
+  takePhotoAction: {fileID: 6686743632733588366, guid: 7a5123ac489819245bcd2c11a32c5c5b, type: 3}

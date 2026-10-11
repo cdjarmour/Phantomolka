@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "fe9031e3-70fb-4f08-b491-b821eebfd2f2",
+            "actions": [
+                {
+                    "name": "RaiseCamera",
+                    "type": "Button",
+                    "id": "f6525bf8-dab3-4e4b-8df5-e2663df25bc4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "TakePhoto",
+                    "type": "Button",
+                    "id": "52732828-77b8-4887-901b-2ad87511cf23",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9d6ebd51-b1c1-4cbe-9b84-0265a63605ba",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakePhoto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7933a888-9a73-4142-a953-496d719399a5",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RaiseCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
