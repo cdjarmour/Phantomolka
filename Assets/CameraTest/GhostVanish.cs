@@ -5,16 +5,23 @@ public class GhostVanish : MonoBehaviour
 {
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float maxDistance = 30f;
-    [SerializeField] private float vanishDelay = 0f;
-    private float unseenTimer;
+    [SerializeField] private float vanishDelay = 0.5f;
+    [SerializeField] private GhostManager manager;
 
     private CameraSubject subject;
     private bool hasBeenSeen;
+    private float unseenTimer;
 
     void Awake()
     {
         subject = GetComponent<CameraSubject>();
         if (playerCamera == null) playerCamera = Camera.main;
+    }
+
+    public void ResetState()
+    {
+        hasBeenSeen = false;
+        unseenTimer = 0f;
     }
 
     void Update()
@@ -31,6 +38,9 @@ public class GhostVanish : MonoBehaviour
         
         unseenTimer += Time.deltaTime;
         if (unseenTimer >= vanishDelay)
+        {
             gameObject.SetActive(false);
+            manager.RemoveGhost(this.gameObject);
+        }
     }
 }
