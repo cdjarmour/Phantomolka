@@ -10,7 +10,7 @@ public class SquareSpawnpoint : Spawnpoint {
         float boundY = sizeY / 2;
         float xPos = transform.position.x + Random.Range(-boundX, boundX);
         float yPos = transform.position.z + Random.Range(-boundY, boundY);
-        return new Vector3(xPos, 0, yPos);
+        return new Vector3(xPos, transform.position.y, yPos);
     }
 
 

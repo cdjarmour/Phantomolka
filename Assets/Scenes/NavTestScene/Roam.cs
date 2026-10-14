@@ -1,5 +1,4 @@
 #if UNITY_EDITOR
-using System.Collections;
 using UnityEditor;
 #endif
 using UnityEngine;
@@ -25,7 +24,7 @@ public class Roam : MonoBehaviour
     private bool isRoaming = false;
     private bool paused = false;
     private float pathDistance = -1;
-
+    private float idleTimer;
 
 #if UNITY_EDITOR
     void OnDrawGizmos() {
@@ -51,8 +50,12 @@ public class Roam : MonoBehaviour
     void Update()
     {
         if (paused) {
-            StartCoroutine(StartIdle());
-            return;
+            if (idleTimer > 0) {
+                idleTimer -= Time.deltaTime;
+            } else {
+                paused = false;
+            }
+                return;
         }
         if (!isRoaming) {
             NextDestination(transform.forward);
@@ -68,18 +71,16 @@ public class Roam : MonoBehaviour
     private bool ReachedDestination() {
         if (!_agent.pathPending && pathDistance >= 0) {
             if (_agent.remainingDistance <= pathDistance * TurnBeforePercent) {
+
+                if (Random.Range(0, 1f) < IdleChance) {
+                    idleTimer = Random.Range(IdleMinTime, IdleMaxTime);
+                    _agent.ResetPath();
+                    paused = true;
+                }
                 return true;
             }
         }
         return false;
-    }
-
-    private IEnumerator StartIdle() {
-        float idleTimer = Random.Range(IdleMinTime,IdleMaxTime);
-
-
-        yield return new WaitForSeconds(idleTimer);
-        paused = false;
     }
 
     public void NextDestination(Vector3 forward) {
@@ -91,15 +92,4 @@ public class Roam : MonoBehaviour
         Vector3 destination = transform.position + direction * distance;
         _agent.destination = destination;
     }
-    public void PauseRoam() {
-        paused = true;
-        _agent.ResetPath();
-        _agent.velocity = Vector3.zero;
-        isRoaming = false;
-    }
-
-    public void UnpauseRoam() {
-        paused = false;
-    }
-
 }

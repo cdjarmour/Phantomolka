@@ -8,7 +8,7 @@ public class CircleSpawnpoint : Spawnpoint {
 
     public override Vector3 GetSpawnPosition() {
         Vector2 point = Random.insideUnitCircle * size;
-        Vector3 target = transform.position + new Vector3(point.x, 0, point.y);
+        Vector3 target = transform.position + new Vector3(point.x, transform.position.y, point.y);
         return target;
     }
 

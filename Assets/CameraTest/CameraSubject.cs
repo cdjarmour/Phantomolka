@@ -7,7 +7,8 @@ public class CameraSubject : MonoBehaviour
     public static readonly List<CameraSubject> All = new List<CameraSubject>();
 
     [SerializeField] private string subjectName = "Ghost";
-    
+    [SerializeField] private List<SpawnConditions> spawnConditions = new List<SpawnConditions>();
+
     private Renderer rend;
 
     public string SubjectName
@@ -18,6 +19,10 @@ public class CameraSubject : MonoBehaviour
     public Bounds Bounds
     {
         get { return rend.bounds; }
+    }
+
+    public List<SpawnConditions> SpawnConditions {
+        get { return spawnConditions; }
     }
 
     public bool IsVisibleTo(Camera cam, float maxDistance)

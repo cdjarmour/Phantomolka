@@ -2,9 +2,9 @@ using UnityEngine;
 using System;
 
 public class GhostManager : MonoBehaviour { 
-    public event Action<GhostVanish> OnGhostVanish;
+    public event Action<GameObject> OnGhostVanish;
 
-    public void RemoveGhost(GhostVanish gv) {
-        OnGhostVanish?.Invoke(gv);
+    public void RemoveGhost(GameObject go) {
+        OnGhostVanish?.Invoke(go);
     }
 }

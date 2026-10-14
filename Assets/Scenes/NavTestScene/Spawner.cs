@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour {
     [SerializeField] GhostManager _ghostManager;
@@ -10,17 +10,37 @@ public class Spawner : MonoBehaviour {
         _ghostManager.OnGhostVanish += RespawnGhost;
     }
 
-    private void RespawnGhost(GhostVanish gv) {
-        StartCoroutine(RespawnGhostTimer(gv));
+    private void RespawnGhost(GameObject ghost) {
+        StartCoroutine(RespawnGhostTimer(ghost));
     }
 
 
 
-    private IEnumerator RespawnGhostTimer(GhostVanish gv) {
+    private IEnumerator RespawnGhostTimer(GameObject ghost) {
+
         yield return new WaitForSeconds(RespawnTimer);
-        Vector3 pos = Spawnpoint.All[Random.Range(0, Spawnpoint.All.Count)].GetSpawnPosition();
-        Transform t = gv.gameObject.transform.parent;
-        t.position = new Vector3(pos.x, t.position.y, pos.z);
-        gv.ResetState();
+        List<Spawnpoint> validSpawns = new List<Spawnpoint>();
+        CameraSubject ghostData = ghost.GetComponent<CameraSubject>();
+        foreach (Spawnpoint sp in Spawnpoint.All) {
+            if (sp.MeetsRequirements(ghostData.SpawnConditions)) {
+                validSpawns.Add(sp);
+            }
+        }
+
+        if (validSpawns.Count == 0) {
+            Debug.Log("no spawn");
+            yield break;
+        }
+        Debug.Log($"Respawning {ghost.name}, requires {ghostData.SpawnConditions.Count}: {string.Join(", ", ghostData.SpawnConditions)}");
+        Vector3 pos = validSpawns[Random.Range(0, validSpawns.Count)].GetSpawnPosition();
+
+        if (ghost.TryGetComponent(out IRespawnPosition rp)) {
+            rp.SetRespawnLocation(pos);
+        }
+        if (ghost.TryGetComponent(out GhostVanish gv)) {
+            gv.ResetState();
+        }
+        ghost.transform.parent.gameObject.SetActive(true);
+        Debug.Log($"activeSelf: {ghost.activeSelf}, activeInHierarchy: {ghost.activeInHierarchy}, parent: {ghost.transform.parent?.name}");
     }
 }
