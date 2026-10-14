@@ -22,10 +22,21 @@ public class GhostVanish : MonoBehaviour
     {
         hasBeenSeen = false;
         unseenTimer = 0f;
+        transform.parent.gameObject.SetActive(true);
     }
 
     void Update()
     {
+        // Ghosts do not vanish from placedcamera views
+        if (PlacedCamera.IsViewing && PlacedCamera.Current != null)
+        {
+            if (PlacedCamera.Current.Sees(subject))
+                hasBeenSeen = true;
+
+            unseenTimer = 0f;
+            return;
+        }
+
         if (subject.IsVisibleTo(playerCamera, maxDistance))
         {
             hasBeenSeen = true;
@@ -39,8 +50,8 @@ public class GhostVanish : MonoBehaviour
         unseenTimer += Time.deltaTime;
         if (unseenTimer >= vanishDelay)
         {
-            gameObject.SetActive(false);
-            manager.RemoveGhost(this.gameObject);
+            transform.parent.gameObject.SetActive(false);
+            manager.RemoveGhost(this);
         }
     }
 }
