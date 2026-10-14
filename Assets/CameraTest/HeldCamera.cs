@@ -4,7 +4,7 @@ using UnityEngine;
 public class HeldCamera : MonoBehaviour
 {
     [SerializeField] private Camera playerCamera;
-    [SerializeField] private float maxDistance = 30f;
+    [SerializeField] private float maxDistance = 100f;
     
     // Boolean tracking whether the camera is raised or not
     private bool isRaised;
@@ -16,6 +16,7 @@ public class HeldCamera : MonoBehaviour
 
     public void SetRaised(bool raised)
     {
+        if (PlacedCamera.IsViewing) raised = false;
         isRaised = raised;
     }
     
@@ -23,9 +24,6 @@ public class HeldCamera : MonoBehaviour
     {
         // Does nothing if the camera is not raised
         if (!isRaised) return;
-
-        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(playerCamera);
-        Vector3 origin = playerCamera.transform.position;
 
         foreach (CameraSubject subject in CameraSubject.All)
         {

@@ -15,6 +15,12 @@ public class PlayerCamera : MonoBehaviour {
         Cursor.visible = false;
     }
 
+    private void OnEnable()
+    {
+        yRotation = _playerForward.eulerAngles.y;
+        xRotation = 0f;
+    }
+
     private void Update() {
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
         float mouseX = mouseDelta.x * sensitivity;

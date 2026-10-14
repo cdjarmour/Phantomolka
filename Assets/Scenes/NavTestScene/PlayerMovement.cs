@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
         jumpInput = InputSystem.actions.FindAction("Jump");
     }
 
+    private void OnDisable()
+    {
+        if (_rb != null)
+            _rb.linearVelocity = new Vector3(0f, _rb.linearVelocity.y, 0f);
+    }
 
     private void FixedUpdate() {
         Vector2 input = moveInput.ReadValue<Vector2>().normalized;

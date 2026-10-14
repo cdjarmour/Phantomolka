@@ -25,6 +25,26 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "EnterCamera",
+                    "type": "Button",
+                    "id": "22a5e6a4-4bda-4e9c-b647-becbab3ad407",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "PlaceCamera",
+                    "type": "Button",
+                    "id": "f99e3c91-d68f-4591-b62e-5a19c938989a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -47,6 +67,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "RaiseCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8acc110-02c9-42eb-b6ad-637e22499636",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3de1a9e-b041-4bec-bf08-9582494de1d5",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlaceCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
