@@ -1,0 +1,99 @@
+{
+    "version": 1,
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "fe9031e3-70fb-4f08-b491-b821eebfd2f2",
+            "actions": [
+                {
+                    "name": "RaiseCamera",
+                    "type": "Button",
+                    "id": "f6525bf8-dab3-4e4b-8df5-e2663df25bc4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "TakePhoto",
+                    "type": "Button",
+                    "id": "52732828-77b8-4887-901b-2ad87511cf23",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "EnterCamera",
+                    "type": "Button",
+                    "id": "22a5e6a4-4bda-4e9c-b647-becbab3ad407",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "PlaceCamera",
+                    "type": "Button",
+                    "id": "f99e3c91-d68f-4591-b62e-5a19c938989a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9d6ebd51-b1c1-4cbe-9b84-0265a63605ba",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakePhoto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7933a888-9a73-4142-a953-496d719399a5",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RaiseCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8acc110-02c9-42eb-b6ad-637e22499636",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3de1a9e-b041-4bec-bf08-9582494de1d5",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlaceCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
