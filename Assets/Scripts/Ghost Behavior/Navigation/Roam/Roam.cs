@@ -25,9 +25,10 @@ public class Roam : MonoBehaviour
     private bool paused = false;
     private float pathDistance = -1;
     private float idleTimer;
+    private bool running = true;
 
 #if UNITY_EDITOR
-    void OnDrawGizmos() {
+    void OnDrawGizmosSelected() {
         Handles.color = Color.red;
 
         float direction = Mathf.Atan2(transform.forward.z, transform.forward.x) * Mathf.Rad2Deg;
@@ -46,9 +47,27 @@ public class Roam : MonoBehaviour
         isRoaming = false;
     }
 
+    public void disableRoam() {
+        running = false;
+        _agent.ResetPath();
+        _agent.velocity = Vector3.zero;
+    }
+
+    public void enableRoam() {
+        _agent.ResetPath();
+        _agent.velocity = Vector3.zero;
+        running = true;
+        paused = false;
+        isRoaming = false;
+        _agent.speed = Speed;
+    }
+
+
        
     void Update()
     {
+        if (!running) return;
+
         if (paused) {
             if (idleTimer > 0) {
                 idleTimer -= Time.deltaTime;

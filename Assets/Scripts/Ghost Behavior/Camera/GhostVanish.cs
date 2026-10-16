@@ -24,6 +24,10 @@ public class GhostVanish : MonoBehaviour
         unseenTimer = 0f;
     }
 
+    public float GetTimerPercent() {
+        return unseenTimer / vanishDelay;
+    }
+
     void Update()
     {
         if (subject.IsVisibleTo(playerCamera, maxDistance))

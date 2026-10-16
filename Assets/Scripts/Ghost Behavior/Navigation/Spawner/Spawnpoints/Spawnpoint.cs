@@ -25,7 +25,7 @@ public abstract class Spawnpoint : MonoBehaviour {
         return true;
     }
 
-    private void OnDrawGizmos() {
+    private void OnDrawGizmosSelected() {
         DrawGizmo();
     }
 }

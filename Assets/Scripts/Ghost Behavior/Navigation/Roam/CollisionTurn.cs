@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionTurn : MonoBehaviour
 {
     [SerializeField] private float CollisionDist;
+    [SerializeField] private float DetectionHeight;
     private Roam roam;
 
     private bool running = false;
@@ -15,7 +16,7 @@ public class CollisionTurn : MonoBehaviour
 
 
     private void Update() {
-
+        Vector3 origin = transform.position + (Vector3.up * DetectionHeight);
         bool collision = Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, CollisionDist);
         if (collision && !running) {
             Debug.Log(hit.normal);
@@ -25,6 +26,6 @@ public class CollisionTurn : MonoBehaviour
         } else if (running && !collision) {
             running = false;
         }
-        Debug.DrawRay(transform.position, transform.forward * CollisionDist, Color.yellow);
+        Debug.DrawRay(origin, transform.forward * CollisionDist, Color.yellow);
     }
 }
