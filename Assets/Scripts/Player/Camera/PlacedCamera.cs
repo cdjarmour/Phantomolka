@@ -56,6 +56,8 @@ public class PlacedCamera : MonoBehaviour
             if (!Sees(subject))
                 continue;
             Debug.Log("Photo taken of: " + subject.SubjectName);
+            if (GhostLogbook.Instance != null)
+                GhostLogbook.Instance.Register(subject.SubjectName);
         }
     }
 }
