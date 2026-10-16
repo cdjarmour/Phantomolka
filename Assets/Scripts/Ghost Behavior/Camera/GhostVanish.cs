@@ -1,0 +1,46 @@
+using UnityEngine;
+
+[RequireComponent(typeof(CameraSubject))]
+public class GhostVanish : MonoBehaviour
+{
+    [SerializeField] private Camera playerCamera;
+    [SerializeField] private float maxDistance = 30f;
+    [SerializeField] private float vanishDelay = 0.5f;
+    [SerializeField] private GhostManager manager;
+
+    private CameraSubject subject;
+    private bool hasBeenSeen;
+    private float unseenTimer;
+
+    void Awake()
+    {
+        subject = GetComponent<CameraSubject>();
+        if (playerCamera == null) playerCamera = Camera.main;
+    }
+
+    public void ResetState()
+    {
+        hasBeenSeen = false;
+        unseenTimer = 0f;
+    }
+
+    void Update()
+    {
+        if (subject.IsVisibleTo(playerCamera, maxDistance))
+        {
+            hasBeenSeen = true;
+            unseenTimer = 0f;
+            return;
+        }
+
+        if (!hasBeenSeen)
+            return;
+        
+        unseenTimer += Time.deltaTime;
+        if (unseenTimer >= vanishDelay)
+        {
+            transform.parent.gameObject.SetActive(false);
+            manager.RemoveGhost(this.gameObject);
+        }
+    }
+}

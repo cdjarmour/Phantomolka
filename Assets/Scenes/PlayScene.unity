@@ -2038,6 +2038,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812431960}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &846538670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6609351412670434731, guid: 28cfc1cafd4848346942dc7290631a0a, type: 3}
+  m_PrefabInstance: {fileID: 1400831688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &852777448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,7 +2334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &981034609
 Transform:
   m_ObjectHideFlags: 0
@@ -2357,6 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ecb4f66322674947941c36fbdc70f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SquareSpawnpoint
+  spawnConditions: 
   sizeX: 60
   sizeY: 60
 --- !u!1 &1041996642
@@ -2714,7 +2720,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170876081}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1214501194 stripped
+--- !u!114 &1336649887 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6727660455482379333, guid: 3be953f92e43bba4e8f0aef68daad874, type: 3}
   m_PrefabInstance: {fileID: 2025972137}
@@ -2807,13 +2813,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6609351412670434731, guid: 28cfc1cafd4848346942dc7290631a0a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2076738750}
-    - targetCorrespondingSourceObject: {fileID: 6609351412670434731, guid: 28cfc1cafd4848346942dc7290631a0a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2076738749}
     - targetCorrespondingSourceObject: {fileID: 6609351412670434731, guid: 28cfc1cafd4848346942dc7290631a0a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2076738751}
+      addedObject: {fileID: 2076738750}
   m_SourcePrefab: {fileID: 100100000, guid: 28cfc1cafd4848346942dc7290631a0a, type: 3}
 --- !u!20 &1400831689 stripped
 Camera:
@@ -3467,7 +3470,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1434722486242486908, guid: 28cfc1cafd4848346942dc7290631a0a, type: 3}
   m_PrefabInstance: {fileID: 1400831688}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645997435}
+  m_GameObject: {fileID: 846538670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 045b89833180bf943af1b513e63b5b0a, type: 3}
@@ -3479,25 +3482,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645997435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aee84fa2791a404388df6954db3ddd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlacedCameraViewer
-  enterPlacedCameraAction: {fileID: -9004450462738322617, guid: 7a5123ac489819245bcd2c11a32c5c5b, type: 3}
-  takePhotoAction: {fileID: 6686743632733588366, guid: 7a5123ac489819245bcd2c11a32c5c5b, type: 3}
-  heldCamera: {fileID: 1214501194}
-  disableWhileViewing:
-  - {fileID: 2076738744}
-  - {fileID: 1400831690}
---- !u!114 &2076738750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645997435}
+  m_GameObject: {fileID: 846538670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b2406e1a038eba458fedadf230b7588, type: 3}
@@ -3505,20 +3490,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraPlacer
   placeAction: {fileID: -8219814139350232990, guid: 7a5123ac489819245bcd2c11a32c5c5b, type: 3}
   cameraPrefab: {fileID: 548367726387266898, guid: 9aaf64b1a25d64d4b9ff1c7b0d53fb75, type: 3}
-  reach: 15
---- !u!114 &2076738751
+  reach: 1
+--- !u!114 &2076738750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645997435}
+  m_GameObject: {fileID: 846538670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62fd74acd2ddb2745a0805845da5dccd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3aee84fa2791a404388df6954db3ddd8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
-  subjectName: cdjarmour
+  m_EditorClassIdentifier: Assembly-CSharp::PlacedCameraViewer
+  enterPlacedCameraAction: {fileID: -9004450462738322617, guid: 7a5123ac489819245bcd2c11a32c5c5b, type: 3}
+  takePhotoAction: {fileID: 6686743632733588366, guid: 7a5123ac489819245bcd2c11a32c5c5b, type: 3}
+  heldCamera: {fileID: 1336649887}
+  disableWhileViewing:
+  - {fileID: 2076738744}
 --- !u!1 &2127179581
 GameObject:
   m_ObjectHideFlags: 0
