@@ -31,6 +31,8 @@ public class HeldCamera : MonoBehaviour
             if (!subject.IsVisibleTo(playerCamera, maxDistance))
                 continue;
             Debug.Log("Photo taken of: " + subject.SubjectName);
+            if (GhostLogbook.Instance != null)
+                GhostLogbook.Instance.Register(subject.SubjectName);
         }
     }
 }
