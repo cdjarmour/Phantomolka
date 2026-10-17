@@ -5,9 +5,10 @@ public class HeldCamera : MonoBehaviour
 {
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float maxDistance = 100f;
-    
+    [SerializeField] private float photoCooldown = 2f;
     // Boolean tracking whether the camera is raised or not
     private bool isRaised;
+    private float nextPhotoTime;
 
     public bool IsRaised
     {
@@ -24,6 +25,10 @@ public class HeldCamera : MonoBehaviour
     {
         // Does nothing if the camera is not raised
         if (!isRaised) return;
+
+        if (Time.time < nextPhotoTime)
+            return;
+        nextPhotoTime = Time.time + photoCooldown;
 
         foreach (CameraSubject subject in CameraSubject.All)
         {

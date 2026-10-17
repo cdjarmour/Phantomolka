@@ -9,6 +9,9 @@ public class PlacedCamera : MonoBehaviour
     [SerializeField] private Camera lens;
     [SerializeField] private PlayerCamera look;
     [SerializeField] private float maxDistance = 100f;
+    [SerializeField] private float photoCooldown = 2f;
+
+    private float nextPhotoTime;
 
     void Awake()
     {
@@ -50,6 +53,10 @@ public class PlacedCamera : MonoBehaviour
 
     public void TakePhoto()
     {
+        if (Time.time < nextPhotoTime)
+            return;
+        nextPhotoTime = Time.time + photoCooldown;
+        
         foreach (CameraSubject subject in CameraSubject.All)
         {
             // Skips if the subject is not visible to the player

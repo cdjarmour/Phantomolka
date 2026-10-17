@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ public class EncyclopediaUI : MonoBehaviour
     [SerializeField] private GameObject panel;
     [SerializeField] private Transform container;
     [SerializeField] private LogbookEntry entryPrefab;
+    [SerializeField] private Behaviour[] disableWhileOpen;
 
     void Start()
     {
@@ -15,13 +17,29 @@ public class EncyclopediaUI : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current != null && Keyboard.current.tabKey.wasPressedThisFrame)
+        if (!Keyboard.current.tabKey.wasPressedThisFrame)
+            return;
+
+        if (PlacedCamera.IsViewing)
+            return;
+        
+        bool open = !panel.activeSelf;
+        panel.SetActive(open);
+
+        if (open)
         {
-            bool open = !panel.activeSelf;
-            panel.SetActive(open);
-            if (open)
                 Rebuild();
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+        } 
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
+
+        foreach (Behaviour b in disableWhileOpen)
+            b.enabled = !open;
     }
 
     void Rebuild()
