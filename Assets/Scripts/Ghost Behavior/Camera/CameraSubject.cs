@@ -9,6 +9,9 @@ public class CameraSubject : MonoBehaviour
     [SerializeField] private string subjectName = "Ghost";
     [SerializeField] private List<SpawnConditions> spawnConditions = new List<SpawnConditions>();
 
+    [SerializeField] private bool placedCameraOnly = false;
+    public bool PlacedCameraOnly => placedCameraOnly;
+
     private Renderer rend;
 
     public string SubjectName

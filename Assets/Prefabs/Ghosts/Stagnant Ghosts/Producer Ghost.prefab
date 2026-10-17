@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6299343643933026639}
   - component: {fileID: 1651755709379281604}
   - component: {fileID: 4623277635025556704}
+  - component: {fileID: 8419123580962077123}
+  - component: {fileID: 3790057175686348181}
   m_Layer: 6
   m_Name: Ghost Model
   m_TagString: Untagged
@@ -31,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 179361058064264872}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.75, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,7 +116,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6299343643933026639
@@ -130,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlightBobbing
   Speed: 2
-  Intensity: 0.25
+  Intensity: 0.15
 --- !u!114 &1651755709379281604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fd74acd2ddb2745a0805845da5dccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
-  subjectName: Influencer Ghost
+  subjectName: Producer Ghost
   spawnConditions: 
 --- !u!114 &4623277635025556704
 MonoBehaviour:
@@ -158,9 +160,122 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostVanish
   playerCamera: {fileID: 0}
-  maxDistance: 100
-  vanishDelay: 0.5
+  maxDistance: 0
+  vanishDelay: 2
   manager: {fileID: 0}
+--- !u!114 &8419123580962077123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179361058064264872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4381342f7022c54caca388be988a45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostFade
+  col: {r: 0.42626378, g: 0.9716981, b: 0.45331642, a: 0}
+  _ghostVanish: {fileID: 4623277635025556704}
+  FadeInTime: 0.5
+  OpacityCap: 0.95
+--- !u!82 &3790057175686348181
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179361058064264872}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 293cc0908e28d404aa4bfbc4f9a5f8f3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7988232250794728086
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,12 +285,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5621191934114607335}
-  - component: {fileID: 3345182006514393854}
-  - component: {fileID: 7668619031264156610}
-  - component: {fileID: 1278969115871809387}
-  - component: {fileID: 3541908505266712973}
   m_Layer: 0
-  m_Name: Influencer Ghost
+  m_Name: Producer Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,80 +308,3 @@ Transform:
   - {fileID: 1315061984341251380}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3345182006514393854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988232250794728086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b96b4e339c6aa24c89da13fc8fb0ed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Roam
-  _agent: {fileID: 3541908505266712973}
-  Speed: 2
-  MinDistPercent: 0.5
-  TurnBeforePercent: 0.5
-  Radius: 10
-  MoveAngle: 160
-  IdleMaxTime: 10
-  IdleMinTime: 1
-  IdleChance: 0
---- !u!114 &7668619031264156610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988232250794728086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e30765a6ab79614288c7edf41e67158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollisionTurn
-  CollisionDist: 1.5
-  DetectionHeight: 0.75
---- !u!114 &1278969115871809387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988232250794728086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6d5817f094ef94cbf509966fd1d241, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PhotoBombNavigate
-  _roam: {fileID: 3345182006514393854}
-  _player: {fileID: 0}
-  _agent: {fileID: 3541908505266712973}
-  _heldCamera: {fileID: 0}
-  FrontDistance: 1
-  UpdateFrequency: 0.25
-  DetectionDistance: 10
-  ChaseSpeed: 5
---- !u!195 &3541908505266712973
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988232250794728086}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4

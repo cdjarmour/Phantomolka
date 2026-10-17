@@ -28,6 +28,7 @@ public class HeldCamera : MonoBehaviour
         foreach (CameraSubject subject in CameraSubject.All)
         {
             // Skips if the subject is not visible to the player
+            if (subject.PlacedCameraOnly) continue;
             if (!subject.IsVisibleTo(playerCamera, maxDistance))
                 continue;
             Debug.Log("Photo taken of: " + subject.SubjectName);

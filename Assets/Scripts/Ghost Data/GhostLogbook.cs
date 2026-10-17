@@ -13,6 +13,11 @@ public class GhostLogbook : MonoBehaviour
     public IReadOnlyList<GhostData> AllGhosts => allGhosts;
     public bool isDiscovered(string ghostName) => discovered.Contains(ghostName);
 
+    public bool AllDiscovered() {
+        return discovered.Count == allGhosts.Length;
+    }
+
+
     void Awake()
     {
         Instance = this;
