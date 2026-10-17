@@ -62,7 +62,9 @@ public class Roam : MonoBehaviour
         _agent.speed = Speed;
     }
 
-
+    public bool getRoaming() {
+        return isRoaming;
+    }
        
     void Update()
     {

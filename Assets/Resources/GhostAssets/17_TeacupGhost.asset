@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 17_TeacupGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Teacup Ghost
-  description: 
+  description: A ghost possessing a teacup.
   portrait: {fileID: 0}
   order: 17

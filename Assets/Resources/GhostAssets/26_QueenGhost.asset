@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 26_QueenGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Queen Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: AWOOGA
+  portrait: {fileID: -3269387735364419874, guid: 709597d719aaa3749bf768cc549b1f3e, type: 3}
   order: 26

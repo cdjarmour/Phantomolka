@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 12_FatGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Fat Ghost
-  description: 
+  description: 'A very large ghost. Reminds me of a guy named Daniel who lives at _____ and his social security number is _________. '
   portrait: {fileID: 0}
   order: 12

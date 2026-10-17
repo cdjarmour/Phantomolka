@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 13_ShyGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Shy Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: "A ghost who doesn\u2019t leave its room and avoids all interaction. Must\u2019ve been a game dev in its past life."
+  portrait: {fileID: 8168033424653815225, guid: bf32543d34110174a906292edf1bed39, type: 3}
   order: 13

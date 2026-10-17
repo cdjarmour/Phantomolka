@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 05_AngryGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Angry Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: An angry ghost >:(
+  portrait: {fileID: -4332070978381443039, guid: e07b65f08809f514b8a1c823714e235b, type: 3}
   order: 5

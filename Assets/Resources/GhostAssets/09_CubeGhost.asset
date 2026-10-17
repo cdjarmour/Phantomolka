@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 09_CubeGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Cube Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: Have you seen this ghost before? No? Me nether.
+  portrait: {fileID: -2916493262240648342, guid: 469624e605acef0488d0f226c305b65d, type: 3}
   order: 9

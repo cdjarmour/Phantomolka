@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7988232250794728086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5621191934114607335}
+  - component: {fileID: 3345182006514393854}
+  - component: {fileID: 7668619031264156610}
+  - component: {fileID: 3861225175198637606}
+  - component: {fileID: 3541908505266712973}
+  m_Layer: 0
+  m_Name: Red Ghost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5621191934114607335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.20063855, z: -0, w: 0.97966534}
+  m_LocalPosition: {x: 3.8823268, y: 0.08333349, z: 17.925087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 996181167179536051}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3345182006514393854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b96b4e339c6aa24c89da13fc8fb0ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Roam
+  _agent: {fileID: 3541908505266712973}
+  Speed: 1
+  MinDistPercent: 0.5
+  TurnBeforePercent: 0.5
+  Radius: 6
+  MoveAngle: 75
+  IdleMaxTime: 10
+  IdleMinTime: 1
+  IdleChance: 0.15
+--- !u!114 &7668619031264156610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e30765a6ab79614288c7edf41e67158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionTurn
+  CollisionDist: 1.5
+  DetectionHeight: 2
+--- !u!114 &3861225175198637606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adbc9f69ef718c14392dff0bffc851ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInvisibility
+  HideRange: 10
+  _player: {fileID: 0}
+  _ghostModel: {fileID: 475400046252903433}
+--- !u!195 &3541908505266712973
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!1001 &1077866158330142783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5621191934114607335}
+    m_Modifications:
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 607331043044043830, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: m_Name
+      value: Default Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330420151701608569, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ec573cf74cf0564a9fc0d8386f11405, type: 2}
+    - target: {fileID: 2810247167670740545, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 552f7b9013d62bb45b6ac4c1709da1aa, type: 2}
+    - target: {fileID: 7762255044840570503, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 552f7b9013d62bb45b6ac4c1709da1aa, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 607331043044043830, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1347683590711727643}
+    - targetCorrespondingSourceObject: {fileID: 607331043044043830, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2740124922249829355}
+  m_SourcePrefab: {fileID: 100100000, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+--- !u!1 &475400046252903433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 607331043044043830, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+  m_PrefabInstance: {fileID: 1077866158330142783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1347683590711727643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475400046252903433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fd74acd2ddb2745a0805845da5dccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
+  subjectName: Red Ghost
+  spawnConditions: 
+  placedCameraOnly: 1
+--- !u!114 &2740124922249829355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475400046252903433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9aa51bc75b68f74b971a28075d618ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostVanish
+  playerCamera: {fileID: 0}
+  maxDistance: 0
+  vanishDelay: 0.5
+  manager: {fileID: 0}
+--- !u!4 &996181167179536051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 227006206613747340, guid: 671af1079e5995948b7db2bde123e16c, type: 3}
+  m_PrefabInstance: {fileID: 1077866158330142783}
+  m_PrefabAsset: {fileID: 0}

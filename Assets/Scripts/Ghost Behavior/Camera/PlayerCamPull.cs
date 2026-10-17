@@ -9,6 +9,7 @@ public class PlayerCamPull : MonoBehaviour
     [SerializeField] private float DetectionDistance;
     [SerializeField] private float PullStrength;
     [SerializeField] private FlightBobbing _fb;
+    [SerializeField] private ScreenOverlayManager _overlayManager;
 
     private bool pulling = false;
 
@@ -23,6 +24,7 @@ public class PlayerCamPull : MonoBehaviour
             pulling = false;
             _roam.enableRoam();
             _fb.enabled = true;
+            _overlayManager.HypnosisDisable();
         }
     }
 
@@ -35,10 +37,12 @@ public class PlayerCamPull : MonoBehaviour
             pulling = true;
             _fb.enabled = false;
             _roam.disableRoam();
+            _overlayManager.HypnosisEnable();
         } else if (pulling && (Vector3.Distance(transform.position, _playerCam.transform.position) > DetectionDistance)) {
             pulling = false;
             _fb.enabled = true;
             _roam.enableRoam();
+            _overlayManager.HypnosisDisable();
         }
 
         if (!pulling) return;

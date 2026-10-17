@@ -17,13 +17,15 @@ public class GhostLogbook : MonoBehaviour
         return discovered.Count == allGhosts.Length;
     }
 
+    public bool AllDiscoveredQueen() {
+        return discovered.Count == allGhosts.Length - 1;
+    }
 
     void Awake()
     {
         Instance = this;
         allGhosts = Resources.LoadAll<GhostData>("GhostAssets");
         Array.Sort(allGhosts, (a, b) => a.order.CompareTo(b.order));
-        Load();
     }
 
     void OnDestroy()

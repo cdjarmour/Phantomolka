@@ -9,6 +9,7 @@ public class AudioCrossFade : MonoBehaviour
     [SerializeField] Transform _player;
     [SerializeField] private float transitionSpeed;
     [Range(0,1)][SerializeField] private float MaxVolume;
+    [Range(0,1)][SerializeField] private float MainMaxVolume;
 
     private GramophonePlay gramophonePlay;
     private bool playing = false;
@@ -21,6 +22,7 @@ public class AudioCrossFade : MonoBehaviour
         gramophonePlay = GetComponent<GramophonePlay>();
         gramophonePlay.OnGramophoneStateChange += SetState;
         gramAudio = GetComponent<AudioSource>();
+        _mainAudio.volume = MainMaxVolume;
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class AudioCrossFade : MonoBehaviour
             _mainAudio.volume = Mathf.MoveTowards(_mainAudio.volume, 0f, step);
             gramAudio.volume = Mathf.MoveTowards(gramAudio.volume, MaxVolume, step);
         } else {
-            _mainAudio.volume = Mathf.MoveTowards(_mainAudio.volume, 1f, step);
+            _mainAudio.volume = Mathf.MoveTowards(_mainAudio.volume, MainMaxVolume, step);
             gramAudio.volume = Mathf.MoveTowards(gramAudio.volume, 0f, step);
         }
     }

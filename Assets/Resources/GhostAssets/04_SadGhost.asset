@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 04_SadGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Sad Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: A sad ghost :(
+  portrait: {fileID: -4620134321954572640, guid: ea94df1054e84714d9bb7615801ce295, type: 3}
   order: 4

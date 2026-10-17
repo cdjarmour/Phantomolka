@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 16_SilverwareGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Silverware Ghost
-  description: 
+  description: "A ghost possessing some silverware. Has definitely been in the Fat Ghost\u2019s mouth before.\r\n"
   portrait: {fileID: 0}
   order: 16

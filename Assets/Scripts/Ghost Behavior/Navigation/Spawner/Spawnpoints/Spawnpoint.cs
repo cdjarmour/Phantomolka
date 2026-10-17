@@ -33,5 +33,6 @@ public abstract class Spawnpoint : MonoBehaviour {
 public enum SpawnConditions {
     Inside,
     Outside,
-    Inanimate
+    Inanimate,
+    Roadblock
 }

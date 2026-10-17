@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 07_PumpkinGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Pumpkin Ghost
-  description: 
+  description: A ghost possessing a pumpkin. Often complains about home insurance premiums around Halloween.
   portrait: {fileID: 0}
   order: 7

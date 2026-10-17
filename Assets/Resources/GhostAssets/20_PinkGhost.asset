@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 20_PinkGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Pink Ghost
-  description: 
+  description: "Don\u2019t pink or else you\u2019ll miss her!"
   portrait: {fileID: 0}
   order: 20

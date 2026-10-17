@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 02_FastGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Fast Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: A fast ghost! Why is he so fast? Who knows?
+  portrait: {fileID: -6593178465320519646, guid: 62659ad09d26e8244937c7b465f375f3, type: 3}
   order: 2

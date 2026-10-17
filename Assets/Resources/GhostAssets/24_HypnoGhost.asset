@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 24_HypnoGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Hypno Ghost
-  description: 
+  description: "The most beautiful ghost. I can\u2019t stop looking at it\u2026 Wait, what am I saying?"
   portrait: {fileID: 0}
   order: 24

@@ -1,41 +1,36 @@
 using UnityEngine;
 
-public class GhostFade : MonoBehaviour
-{
-    [SerializeField] private Color col;
+public class GhostFade : MonoBehaviour {
     [SerializeField] private GhostVanish _ghostVanish;
-
     [SerializeField] private float FadeInTime;
-    [Range(0, 1)][SerializeField] private float OpacityCap;
+    [Range(0, 1)][SerializeField] private float OpacityCap = 1f;
 
-    private Material mat;
+    private Renderer[] renderers;
     private float fadeInTimer = 0;
 
     private void Awake() {
-        mat = GetComponent<Renderer>().material;
+        renderers = GetComponentsInChildren<Renderer>(true);
     }
 
     private void OnEnable() {
-        Color c = col;
-        c.a = 0;
-        mat.color = c;
+        SetOpacity(0);
         fadeInTimer = 0;
     }
 
-    void Update()
-    {
-        Color c = col;
+    void Update() {
         if (fadeInTimer < FadeInTime) {
             fadeInTimer += Time.deltaTime;
-            c.a = Mathf.Min(fadeInTimer / FadeInTime, 1) * OpacityCap;
-            mat.color = c;
+            SetOpacity(Mathf.Min(fadeInTimer / FadeInTime, 1) * OpacityCap);
             return;
         }
+        SetOpacity(OpacityCap * (1 - Mathf.Min(_ghostVanish.GetTimerPercent(), 1)));
+    }
 
-
-        c.a = OpacityCap * (1 - Mathf.Min(_ghostVanish.GetTimerPercent(), 1));
-        mat.color = c;
-        
-
+    private void SetOpacity(float opacity) {
+        Vector4 remap = new Vector4(0, Mathf.Lerp(0.75f, 1f, opacity), 0, 0);
+        foreach (Renderer r in renderers) {
+            r.material.SetVector("_Remap_Alpha", remap);
+            r.material.SetFloat("_Opacity", opacity);
+        }
     }
 }

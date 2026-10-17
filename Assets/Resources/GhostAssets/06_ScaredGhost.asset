@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 06_ScaredGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Scared Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: "A ghost that doesn\u2019t like you. Go away, meanie."
+  portrait: {fileID: -2000381034473107101, guid: c5c662f142b4b1746856e66ef9d4b706, type: 3}
   order: 6

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 18_ProducerGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Producer Ghost
-  description: 
-  portrait: {fileID: 0}
+  description: Check out these fire beats, yo! Rumor has it that his mixtape was so hot, it burned the building down, turning everyone into ghosts.
+  portrait: {fileID: 5407079014520100288, guid: edc101e315c649446b5990fd5a0ef280, type: 3}
   order: 18

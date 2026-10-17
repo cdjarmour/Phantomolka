@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 21_BlueGhost
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Blue Ghost
-  description: 
+  description: "Don\u2019t ink or else you\u2019ll miss him!"
   portrait: {fileID: 0}
   order: 21
