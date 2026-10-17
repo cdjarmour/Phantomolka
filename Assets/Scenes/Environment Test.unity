@@ -24579,6 +24579,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &4366960313031132922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.26933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.356
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675017670929235152, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_Name
+      value: Queen Ghost
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
 --- !u!33 &4552144840027157791
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25259,3 +25316,4 @@ SceneRoots:
   - {fileID: 751122957}
   - {fileID: 909242819}
   - {fileID: 838544741}
+  - {fileID: 4366960313031132922}
