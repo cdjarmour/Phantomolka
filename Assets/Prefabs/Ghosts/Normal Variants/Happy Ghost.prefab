@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
   subjectName: Happy Ghost
-  spawnConditions: 
+  spawnConditions: 01000000i
   placedCameraOnly: 0
 --- !u!114 &2359038147148075742
 MonoBehaviour:

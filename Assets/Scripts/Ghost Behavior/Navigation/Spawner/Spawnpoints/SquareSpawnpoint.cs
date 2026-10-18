@@ -1,4 +1,3 @@
-using UnityEditor;
 using UnityEngine;
 
 
@@ -15,6 +14,7 @@ public class SquareSpawnpoint : Spawnpoint {
 
 
     protected override void DrawGizmo() {
+#if UNITY_EDITOR
         float boundX = sizeX / 2;
         float boundZ = sizeY / 2;
         Vector3[] corners = {
@@ -25,7 +25,8 @@ public class SquareSpawnpoint : Spawnpoint {
        };
 
 
-        Handles.color = Color.green;
-        Handles.DrawAAConvexPolygon(corners);
+        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.DrawAAConvexPolygon(corners);
+#endif
     }
 }

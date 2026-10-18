@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Happy Ghost
   description: A happy ghost :)
-  portrait: {fileID: 0}
+  portrait: {fileID: -5528499919758914164, guid: 6c92ee5faa841fb4b8eef2e8823dde2e, type: 3}
   order: 3

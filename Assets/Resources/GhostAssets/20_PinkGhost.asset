@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Pink Ghost
   description: "Don\u2019t pink or else you\u2019ll miss her!"
-  portrait: {fileID: 0}
+  portrait: {fileID: -2617951017583475106, guid: 1479aaef3737b72459081f9b1f984e15, type: 3}
   order: 20

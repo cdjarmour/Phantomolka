@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
   subjectName: Sad Ghost
-  spawnConditions: 
+  spawnConditions: 01000000i
   placedCameraOnly: 0
 --- !u!114 &580025250133848764
 MonoBehaviour:

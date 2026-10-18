@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
   subjectName: Influencer Ghost
-  spawnConditions: 
+  spawnConditions: 00000000i
   placedCameraOnly: 0
 --- !u!114 &1659359274120152996
 MonoBehaviour:

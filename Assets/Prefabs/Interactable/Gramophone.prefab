@@ -143,10 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99df8d9574fe444cb986a6af5930868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioCrossFade
-  _mainAudio: {fileID: 0}
-  _player: {fileID: 0}
+  _mainAudio: {fileID: 7432364765709108595}
+  _player: {fileID: 5410809843188275387}
   transitionSpeed: 1.5
   MaxVolume: 0.8
+  MainMaxVolume: 0
 --- !u!114 &3120191938197532241
 MonoBehaviour:
   m_ObjectHideFlags: 0

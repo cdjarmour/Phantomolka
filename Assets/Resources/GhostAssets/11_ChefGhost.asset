@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Chef Ghost
   description: A ghost that likes to prepare food. Do ghosts even need to eat?
-  portrait: {fileID: 0}
+  portrait: {fileID: -4800132147953900410, guid: e3b393cac3e954e49a0341bfdc836d29, type: 3}
   order: 11

@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
   subjectName: Hypno Ghost
-  spawnConditions: 
+  spawnConditions: 00000000i
   placedCameraOnly: 0
 --- !u!114 &1520629730305325811
 MonoBehaviour:

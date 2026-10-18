@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fd74acd2ddb2745a0805845da5dccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
-  subjectName: Pink Ghost
+  subjectName: Orange Ghost
   spawnConditions: 
   placedCameraOnly: 1
 --- !u!114 &2740124922249829355

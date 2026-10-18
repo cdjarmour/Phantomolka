@@ -17,7 +17,7 @@ public class ProducerGhostSpawn : MonoBehaviour {
             back.Normalize();
 
             Vector3 pos = _player.position + back * distanceBehind;
-            pos.y = _ghost.transform.position.y;
+            pos.y = _player.position.y;
 
             _ghost.transform.position = pos;
             _ghost.transform.rotation = Quaternion.LookRotation(-back);

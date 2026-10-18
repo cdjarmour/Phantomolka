@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
   subjectName: Fat Ghost
-  spawnConditions: 01000000i
+  spawnConditions: 00000000i
   placedCameraOnly: 0
 --- !u!114 &387676359091425286
 MonoBehaviour:

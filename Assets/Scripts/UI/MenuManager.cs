@@ -16,6 +16,7 @@ public class MenuManager : MonoBehaviour {
     [SerializeField] private GameObject _mainMenu;
     [SerializeField] private GameObject _playObjects;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private GameObject _winScreen;
 
     private GameObject[] _tabs;
     private bool starting;
@@ -64,6 +65,7 @@ public class MenuManager : MonoBehaviour {
         }
         _playObjects.SetActive(true);
         _mainMenu.SetActive(false);
+        _winScreen.SetActive(true);
     }
 
 

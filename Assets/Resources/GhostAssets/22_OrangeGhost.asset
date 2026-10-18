@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Orange Ghost
   description: "Don\u2019t clyde or else you\u2019ll miss him!"
-  portrait: {fileID: 0}
+  portrait: {fileID: 3976844992896569140, guid: a1c50b58abb63c646b8a26fc726ac23d, type: 3}
   order: 22

@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
   subjectName: Pumpkin Ghost
-  spawnConditions: 
+  spawnConditions: 0100000002000000i
   placedCameraOnly: 0
 --- !u!114 &8943082062429037583
 MonoBehaviour:

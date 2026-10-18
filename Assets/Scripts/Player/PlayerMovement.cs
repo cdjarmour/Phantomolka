@@ -8,11 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float JumpStrength;
 
     private InputAction moveInput;
-    private InputAction jumpInput;
 
     private void Start() {
         moveInput = InputSystem.actions.FindAction("Move");
-        jumpInput = InputSystem.actions.FindAction("Jump");
     }
 
     private void OnDisable()
@@ -27,12 +25,5 @@ public class PlayerMovement : MonoBehaviour
         _rb.linearVelocity = new Vector3(dir.x * Speed, _rb.linearVelocity.y, dir.z * Speed);
     }
 
-    private void Update() {
-        if (jumpInput.WasPressedThisFrame()) {
-            if (_rb.linearVelocity.y <= 0.1) {
-                _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, JumpStrength, _rb.linearVelocity.z);
-            }
-        }
-    }
 
 }

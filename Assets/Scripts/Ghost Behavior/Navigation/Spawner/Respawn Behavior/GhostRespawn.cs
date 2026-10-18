@@ -1,9 +1,10 @@
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class GhostRespawn : MonoBehaviour, IRespawnPosition
 {
     public void SetRespawnLocation(Vector3 spawnPosition) {
-        transform.parent.position = new Vector3(spawnPosition.x, transform.position.y, spawnPosition.z);
+        if (UnityEngine.AI.NavMesh.SamplePosition(spawnPosition, out UnityEngine.AI.NavMeshHit hit, 10f, UnityEngine.AI.NavMesh.AllAreas))
+            spawnPosition = hit.position;
+        transform.parent.position = spawnPosition;
     }
 }

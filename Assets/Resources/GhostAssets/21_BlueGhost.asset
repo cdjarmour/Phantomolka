@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Blue Ghost
   description: "Don\u2019t ink or else you\u2019ll miss him!"
-  portrait: {fileID: 0}
+  portrait: {fileID: 3438593377009521663, guid: b82fef4ad08da7949a7cb42de833160a, type: 3}
   order: 21

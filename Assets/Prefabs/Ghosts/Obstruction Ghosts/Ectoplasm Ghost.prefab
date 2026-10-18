@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
   subjectName: Ectoplasm Ghost
-  spawnConditions: 020000000000000003000000i
+  spawnConditions: 03000000i
   placedCameraOnly: 0
 --- !u!114 &6405102577701586881
 MonoBehaviour:

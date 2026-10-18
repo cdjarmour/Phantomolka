@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Red Ghost
   description: "Don\u2019t blink or else you\u2019ll miss him!"
-  portrait: {fileID: 0}
+  portrait: {fileID: 3203025088117104028, guid: 6e63928942dbeda449332cd91ec0e3e1, type: 3}
   order: 19

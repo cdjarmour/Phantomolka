@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostName: Hypno Ghost
   description: "The most beautiful ghost. I can\u2019t stop looking at it\u2026 Wait, what am I saying?"
-  portrait: {fileID: 0}
+  portrait: {fileID: 8275454756684316309, guid: c3e1d3831643b2b48aeaa2c4136a0c2d, type: 3}
   order: 24
