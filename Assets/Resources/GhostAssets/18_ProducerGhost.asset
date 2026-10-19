@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701d478832956454881224c7785b6ec1, type: 3}
+  m_Name: 18_ProducerGhost
+  m_EditorClassIdentifier: Assembly-CSharp::GhostData
+  ghostName: Producer Ghost
+  description: Check out these fire beats, yo! Rumor has it that his mixtape was so hot, it burned the building down, turning everyone into ghosts.
+  portrait: {fileID: 5407079014520100288, guid: edc101e315c649446b5990fd5a0ef280, type: 3}
+  order: 18

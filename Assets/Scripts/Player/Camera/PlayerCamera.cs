@@ -7,18 +7,9 @@ public class PlayerCamera : MonoBehaviour {
 
     public Transform _playerForward;
 
-    float xRotation;
-    float yRotation;
-
     private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-    }
-
-    private void OnEnable()
-    {
-        yRotation = _playerForward.eulerAngles.y;
-        xRotation = 0f;
     }
 
     private void Update() {
@@ -26,11 +17,11 @@ public class PlayerCamera : MonoBehaviour {
         float mouseX = mouseDelta.x * sensitivity;
         float mouseY = mouseDelta.y * sensitivity;
 
-        yRotation += mouseX;
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        _playerForward.Rotate(0f, mouseX, 0f, Space.World);
 
-        _playerForward.rotation = Quaternion.Euler(0, yRotation, 0);
-        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        float pitch = transform.localEulerAngles.x;
+        if (pitch > 180f) pitch -= 360f;
+        pitch = Mathf.Clamp(pitch - mouseY, -90f, 90f);
+        transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
     }
 }

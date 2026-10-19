@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7988232250794728086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5621191934114607335}
+  - component: {fileID: 2701476838713072316}
+  m_Layer: 0
+  m_Name: Queen Ghost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5621191934114607335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.20063855, z: -0, w: 0.97966534}
+  m_LocalPosition: {x: 3.8823268, y: 0, z: 17.925087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 344632157525378898}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2701476838713072316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fee269ef8f0fa49b9e8f685ded77ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QueenGhostSpawn
+  _queenModel: {fileID: 1117932517388344808}
+  _ghostLogbook: {fileID: 0}
+--- !u!1001 &5990311452512837944
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5621191934114607335}
+    m_Modifications:
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675017670929235152, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      propertyPath: m_Name
+      value: Queen Ghost
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6675017670929235152, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 820066254532235577}
+    - targetCorrespondingSourceObject: {fileID: 6675017670929235152, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 327053717150508416}
+    - targetCorrespondingSourceObject: {fileID: 6675017670929235152, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1223682886415109506}
+  m_SourcePrefab: {fileID: 100100000, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+--- !u!4 &344632157525378898 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6334802812001674858, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+  m_PrefabInstance: {fileID: 5990311452512837944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1117932517388344808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6675017670929235152, guid: 01d5d613ac3d34241b3efe86b8b7bb7d, type: 3}
+  m_PrefabInstance: {fileID: 5990311452512837944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &820066254532235577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117932517388344808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d06f90bdc578f9438217b2a9406e7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightBobbing
+  Speed: 2
+  Intensity: 0.15
+--- !u!114 &327053717150508416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117932517388344808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fd74acd2ddb2745a0805845da5dccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
+  subjectName: Queen Ghost
+  spawnConditions: 
+  placedCameraOnly: 0
+--- !u!114 &1223682886415109506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117932517388344808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9aa51bc75b68f74b971a28075d618ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostVanish
+  playerCamera: {fileID: 0}
+  maxDistance: 0
+  vanishDelay: 2
+  manager: {fileID: 0}

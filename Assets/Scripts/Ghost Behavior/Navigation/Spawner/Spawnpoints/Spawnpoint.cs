@@ -25,7 +25,7 @@ public abstract class Spawnpoint : MonoBehaviour {
         return true;
     }
 
-    private void OnDrawGizmos() {
+    private void OnDrawGizmosSelected() {
         DrawGizmo();
     }
 }
@@ -33,5 +33,6 @@ public abstract class Spawnpoint : MonoBehaviour {
 public enum SpawnConditions {
     Inside,
     Outside,
-    Inanimate
+    Inanimate,
+    Roadblock
 }

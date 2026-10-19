@@ -16,12 +16,15 @@ public class DistanceFade : MonoBehaviour {
     [Range(0f, 1f)]
     [SerializeField] private float MaxOpacity;
 
+    [SerializeField] private Color Col = Color.white;
+
 
     private Material mat;
 
 
     private void Start() {
         mat = GetComponent<Renderer>().material;
+        mat.color = Col;
     }
 
 

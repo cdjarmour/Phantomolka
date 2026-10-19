@@ -31,19 +31,18 @@ public class CameraPlacer : MonoBehaviour
     {
         if (PlacedCamera.IsViewing)
             return;
-        
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        if (!Physics.Raycast(ray, out RaycastHit hit, reach, ~0, QueryTriggerInteraction.Ignore))
+
+        Vector3 forward = playerCamera.transform.forward;
+        forward.y = 0;
+        forward = forward.normalized;
+
+        Vector3 start = playerCamera.transform.position + forward * reach;
+        if (!Physics.Raycast(start, Vector3.down, out RaycastHit hit, 5f))
             return;
-        
+
         if (placed != null)
             Destroy(placed.gameObject);
-        
-        // Keep camera upright and flat when placed
-        Vector3 flat = Vector3.ProjectOnPlane(hit.normal, Vector3.up);
-        if (flat.sqrMagnitude < 0.01f)
-            flat = -playerCamera.transform.forward;
 
-        placed = Instantiate(cameraPrefab, hit.point + hit.normal * 0.05f, Quaternion.LookRotation(flat));
+        placed = Instantiate(cameraPrefab, hit.point, Quaternion.LookRotation(forward));
     }
 }

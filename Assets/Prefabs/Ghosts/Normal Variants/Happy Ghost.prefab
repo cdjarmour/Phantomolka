@@ -1,0 +1,246 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7988232250794728086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5621191934114607335}
+  - component: {fileID: 3345182006514393854}
+  - component: {fileID: 7668619031264156610}
+  - component: {fileID: 3541908505266712973}
+  m_Layer: 0
+  m_Name: Happy Ghost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5621191934114607335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.20063855, z: -0, w: 0.97966534}
+  m_LocalPosition: {x: 3.8823268, y: 0, z: 17.925087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2144337307547470535}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3345182006514393854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b96b4e339c6aa24c89da13fc8fb0ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Roam
+  _agent: {fileID: 3541908505266712973}
+  Speed: 1
+  MinDistPercent: 0.5
+  TurnBeforePercent: 0.5
+  Radius: 6
+  MoveAngle: 75
+  IdleMaxTime: 10
+  IdleMinTime: 1
+  IdleChance: 0.15
+--- !u!114 &7668619031264156610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e30765a6ab79614288c7edf41e67158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionTurn
+  CollisionDist: 1.5
+  DetectionHeight: 2.5
+--- !u!195 &3541908505266712973
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988232250794728086}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!1001 &199282524222967785
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5621191934114607335}
+    m_Modifications:
+    - target: {fileID: 1462009210430332820, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_Name
+      value: HappyGhost
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1462009210430332820, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6003452229418647376}
+    - targetCorrespondingSourceObject: {fileID: 1462009210430332820, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4878861285102082195}
+    - targetCorrespondingSourceObject: {fileID: 1462009210430332820, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2359038147148075742}
+    - targetCorrespondingSourceObject: {fileID: 1462009210430332820, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6533851677616037145}
+  m_SourcePrefab: {fileID: 100100000, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+--- !u!1 &1624083983003046013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1462009210430332820, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+  m_PrefabInstance: {fileID: 199282524222967785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6003452229418647376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624083983003046013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d06f90bdc578f9438217b2a9406e7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightBobbing
+  Speed: 3
+  Intensity: 0.75
+--- !u!114 &4878861285102082195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624083983003046013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fd74acd2ddb2745a0805845da5dccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraSubject
+  subjectName: Happy Ghost
+  spawnConditions: 01000000i
+  placedCameraOnly: 0
+--- !u!114 &2359038147148075742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624083983003046013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9aa51bc75b68f74b971a28075d618ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostVanish
+  playerCamera: {fileID: 0}
+  maxDistance: 100
+  vanishDelay: 0.5
+  manager: {fileID: 0}
+--- !u!114 &6533851677616037145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624083983003046013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48500130b82186444b08ba96e9cf8b11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostRespawn
+--- !u!4 &2144337307547470535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2234287951661810990, guid: d6e811b9320c7ad4f805ea79c574ee36, type: 3}
+  m_PrefabInstance: {fileID: 199282524222967785}
+  m_PrefabAsset: {fileID: 0}
